@@ -10,7 +10,8 @@ A FastAPI-based microservice to manage and explore organizational hierarchies.
 cd orgchart-service
 docker-compose up --build
 ```
-The service runs on `http://localhost:8000`
+- The service runs on `http://localhost:8000`
+- Import the postman collection `Org Chart API.postman_collection.json` to explore all the implemented APIs :)
 
 ## 2. Database Initialization & Seeding
 

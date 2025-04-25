@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "2167dba6-eb5f-4cad-9a4c-321bf552942a",
+		"name": "Org Chart API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29418082",
+		"_collection_link": "https://speeding-star-228614.postman.co/workspace/edutracker~696f6674-ac4f-4be4-900e-aba64aa9ff0c/collection/29418082-2167dba6-eb5f-4cad-9a4c-321bf552942a?action=share&source=collection_link&creator=29418082"
+	},
+	"item": [
+		{
+			"name": "seed data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/seed-data/populate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"seed-data",
+						"populate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Org Chart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Acme Corporation\"}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/orgcharts/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "org by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/orgcharts/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"jims Doe\",\r\n    \"title\": \"Software Engineer\",\r\n    \"manager_id\": 133878\r\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/orgcharts/15/employees",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"15",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John Doe Jr.\",\r\n    \"title\": \"Senior Software Engineer\",\r\n    \"manager_id\": 1\r\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/orgcharts/10001/employees/100182",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"10001",
+						"employees",
+						"100182"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Promote to CEO",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/orgcharts/300/employees/2899/promote",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"300",
+						"employees",
+						"2899",
+						"promote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employees by org id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/orgcharts/300/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"300",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/orgcharts/13/employees/117",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"13",
+						"employees",
+						"117"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee direct reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/orgcharts/13/employees/119/direct_reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"13",
+						"employees",
+						"119",
+						"direct_reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "manager chain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/orgcharts/13/employees/120/manager_chain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"13",
+						"employees",
+						"120",
+						"manager_chain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/orgcharts/15/employees/133878",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"15",
+						"employees",
+						"133878"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee promote",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/orgcharts/24/employees/213/promote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"orgcharts",
+						"24",
+						"employees",
+						"213",
+						"promote"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8000"
+		}
+	]
+}
