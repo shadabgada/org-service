@@ -125,7 +125,7 @@
 					"raw": "{\r\n    \"name\": \"John Doe Jr.\",\r\n    \"title\": \"Senior Software Engineer\",\r\n    \"manager_id\": 1\r\n}"
 				},
 				"url": {
-					"raw": "{{base_url}}/api/v1/orgcharts/10001/employees/100182",
+					"raw": "{{base_url}}/api/v1/orgcharts/300/employees/2899",
 					"host": [
 						"{{base_url}}"
 					],
@@ -133,9 +133,9 @@
 						"api",
 						"v1",
 						"orgcharts",
-						"10001",
+						"300",
 						"employees",
-						"100182"
+						"2899"
 					]
 				}
 			},
@@ -226,7 +226,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/v1/orgcharts/13/employees/119/direct_reports",
+					"raw": "http://localhost:8000/api/v1/orgcharts/15/employees/130/direct_reports",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -236,9 +236,9 @@
 						"api",
 						"v1",
 						"orgcharts",
-						"13",
+						"15",
 						"employees",
-						"119",
+						"130",
 						"direct_reports"
 					]
 				}
@@ -289,31 +289,6 @@
 						"15",
 						"employees",
 						"133878"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "employee promote",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/v1/orgcharts/24/employees/213/promote",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"v1",
-						"orgcharts",
-						"24",
-						"employees",
-						"213",
-						"promote"
 					]
 				}
 			},
